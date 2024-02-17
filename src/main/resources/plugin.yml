@@ -1,0 +1,36 @@
+name: EventManager
+version: '${project.version}'
+main: me.gksx.eventmanager.EventManager
+api-version: '1.20'
+commands:
+  startEvent:
+    description: Start the event
+    usage: /start
+    permission: eventmanager.start
+  stopEvent:
+    description: Stop the event
+    usage: /stop
+    permission: eventmanager.stop
+  spectate:
+    description: Spectate the event
+    usage: /spectate
+  lobby:
+    description: Go to the event lobby
+    usage: /lobby
+  switchTeam:
+    description: Switch team
+    usage: /switchteam
+  getTeam:
+    description: Get team
+    usage: /getteam
+  manageKits:
+    description: Manage the kits in the game
+    usage: /managekits
+    permission: eventmanager.manageKits
+permissions:
+  eventmanager.start:
+    description: Allows the player to start the event
+    default: op
+  eventmanager.stop:
+    description: Allows the player to stop the event
+    default: op
