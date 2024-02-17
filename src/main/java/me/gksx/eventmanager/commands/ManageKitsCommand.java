@@ -53,7 +53,7 @@ public class ManageKitsCommand implements CommandExecutor {
         inventory.setItem(15, getRedstoneButton);
 
         player.openInventory(inventory);
-        player.setMetadata("OpenedMenu", new FixedMetadataValue(EventManager.getInstance(), inventory));
+        player.setMetadata("OpenedMenu", new FixedMetadataValue(EventManager.getInstance(), ". Kit Manager ."));
 
         return true;
     }

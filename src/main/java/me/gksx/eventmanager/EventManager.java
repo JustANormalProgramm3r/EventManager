@@ -3,6 +3,8 @@ package me.gksx.eventmanager;
 import me.gksx.eventmanager.commands.*;
 import me.gksx.eventmanager.listeners.BlockBreakListener;
 import me.gksx.eventmanager.listeners.DeathListener;
+import me.gksx.eventmanager.listeners.PlayerHurtListener;
+import me.gksx.eventmanager.listeners.PlayerKitManagerListener;
 import me.gksx.eventmanager.manager.GameManager;
 import me.gksx.eventmanager.manager.PlayerManager;
 import org.bukkit.plugin.Plugin;
@@ -34,6 +36,8 @@ public final class EventManager extends JavaPlugin {
         Objects.requireNonNull(getCommand("getTeam")).setExecutor(new GetTeamCommand(gameManager));
         Objects.requireNonNull(getCommand("manageKits")).setExecutor(new ManageKitsCommand(gameManager));
         getServer().getPluginManager().registerEvents(new BlockBreakListener(gameManager, playerManager), this);
+        getServer().getPluginManager().registerEvents(new PlayerHurtListener(gameManager), this);
+        getServer().getPluginManager().registerEvents(new PlayerKitManagerListener(), this);
         getServer().getPluginManager().registerEvents(new DeathListener(gameManager), this);
     }
 
