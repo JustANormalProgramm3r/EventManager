@@ -2,7 +2,7 @@ package me.gksx.eventmanager.manager;
 
 import me.gksx.eventmanager.EventManager;
 import me.gksx.eventmanager.tasks.GameStartCountdownTask;
-import me.gksx.eventmanager.util;
+import me.gksx.eventmanager.util.util;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;

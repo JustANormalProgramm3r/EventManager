@@ -1,13 +1,16 @@
 me\gksx\eventmanager\commands\StopCommand.class
+me\gksx\eventmanager\util\util.class
 me\gksx\eventmanager\commands\StartCommand.class
+me\gksx\eventmanager\util\ConfigUtil.class
+me\gksx\eventmanager\commands\ManageKitsCommand.class
 me\gksx\eventmanager\commands\SwitchTeamCommand.class
 me\gksx\eventmanager\commands\GetTeamCommand.class
 me\gksx\eventmanager\manager\GameManager.class
 me\gksx\eventmanager\tasks\GameStartCountdownTask.class
-me\gksx\eventmanager\util.class
 me\gksx\eventmanager\commands\SpectateCommand.class
 me\gksx\eventmanager\manager\BlockManager.class
 me\gksx\eventmanager\listeners\DeathListener.class
+me\gksx\eventmanager\listeners\PlayerKitManagerListener.class
 me\gksx\eventmanager\listeners\BlockBreakListener.class
 me\gksx\eventmanager\EventManager.class
 me\gksx\eventmanager\commands\LobbyCommand.class

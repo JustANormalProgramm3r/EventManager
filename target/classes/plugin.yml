@@ -23,6 +23,10 @@ commands:
   getTeam:
     description: Get team
     usage: /getteam
+  manageKits:
+    description: Manage the kits in the game
+    usage: /managekits
+    permission: eventmanager.manageKits
 permissions:
   eventmanager.start:
     description: Allows the player to start the event

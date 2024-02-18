@@ -13,7 +13,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Objects;
 
 public final class EventManager extends JavaPlugin {
-
     private static EventManager instance;
     private GameManager gameManager;
 
@@ -25,6 +24,7 @@ public final class EventManager extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
+        saveDefaultConfig();
         instance = this;
         this.gameManager = new GameManager(this);
         PlayerManager playerManager = new PlayerManager(gameManager);
@@ -34,7 +34,7 @@ public final class EventManager extends JavaPlugin {
         Objects.requireNonNull(getCommand("switchTeam")).setExecutor(new SwitchTeamCommand(gameManager));
         Objects.requireNonNull(getCommand("lobby")).setExecutor(new LobbyCommand(gameManager));
         Objects.requireNonNull(getCommand("getTeam")).setExecutor(new GetTeamCommand(gameManager));
-        Objects.requireNonNull(getCommand("manageKits")).setExecutor(new ManageKitsCommand(gameManager));
+        Objects.requireNonNull(getCommand("manageKits")).setExecutor(new ManageKitsCommand());
         getServer().getPluginManager().registerEvents(new BlockBreakListener(gameManager, playerManager), this);
         getServer().getPluginManager().registerEvents(new PlayerHurtListener(gameManager), this);
         getServer().getPluginManager().registerEvents(new PlayerKitManagerListener(), this);

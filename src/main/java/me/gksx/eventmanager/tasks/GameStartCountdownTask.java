@@ -2,7 +2,7 @@ package me.gksx.eventmanager.tasks;
 
 import me.gksx.eventmanager.manager.GameManager;
 import me.gksx.eventmanager.manager.GameState;
-import me.gksx.eventmanager.util;
+import me.gksx.eventmanager.util.util;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class GameStartCountdownTask extends BukkitRunnable {

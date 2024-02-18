@@ -2,7 +2,7 @@ package me.gksx.eventmanager.listeners;
 
 import me.gksx.eventmanager.manager.GameManager;
 import me.gksx.eventmanager.manager.GameState;
-import me.gksx.eventmanager.util;
+import me.gksx.eventmanager.util.util;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
